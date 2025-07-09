@@ -1,12 +1,14 @@
 const employees = [
-    {id:1,name:"Prakhar srivastava",age:22,department:"IT",salary:50000},
-    {id:2,name:"Aman Kumar",age:23,department:"HR",salary:60000},
-    {id:3,name:"Rohit Singh",age:24,department:"Finance",salary:70000},
-    {id:4,name:"Sakshi Gupta",age:25,department:"Marketing",salary:80000},
-    {id:5,name:"Neha Sharma",age:26,department:"Sales", salary:90000},
-    {id:6,name:"Rahul Verma",age:27,department:"IT",salary:55000},
-    {id:7,name:"Priya Singh",age:28,department:"HR",salary:65000},
-    {id:8,name:"Vikash Kumar",age:29,department:"Finance",salary:75000}
+    {id:1,name:"Prakhar Srivastava",age:22,department:"IT",salary:50000,spealization:"JavaScript"},
+    {id:2,name:"Aman Kumar",age:23,department:"Js developer",salary:60000,spealization:"JavaScript"},
+    {id:3,name:"Rohit Singh",age:24,department:"Finance",salary:70000,  spealization:"Financial Analyst"},
+    {id:4,name:"Sakshi Gupta",age:25,department:"Marketing",salary:80000,   spealization:"Digital Marketing Specialist"},
+    {id:5,name:"Neha Sharma",age:26,department:"Sales", salary:90000,   spealization:"Sales Manager"},
+    {id:6,name:"Rahul Verma",age:27,department:"IT",salary:55000,   spealization:"Software Engineer"},
+    {id:7,name:"Priya Singh",age:28,department:"HR",salary:65000,   spealization:"HR Manager"},
+    {id:8,name:"Vikash Kumar",age:29,department:"Finance",salary:75000,   spealization:"Accountant"},
+    {id:9,name:"Anjali Patel",age:30,department:"HR",salary:85000,   spealization:"Content Strategist"},
+    {id:10,name:"Suresh Yadav",age:31,department:"Sales",salary:95000,   spealization:"Business Development Manager"}
 ];
  // Function to display all employees
  function displayEmployees() {
@@ -30,4 +32,10 @@ function findEmployeeById(employeeId) {
       else{
         document.getElementById('employeesDetails').innerHTML = 'no employee has been found with this ID';
        }
+   }
+   function FindJavaScript(){
+     const jsEmployees= employees.filter(employee => employee.spealization ==="JavaScript");
+     document.getElementById('employeesDetails').innerHTML = jsEmployees.map((employee,index)=>`<p>${employee.id}: ${employee.name}- ${employee.department}- ${employee.spealization}- $${employee.salary}</p>`).join('');
+
+
    }
