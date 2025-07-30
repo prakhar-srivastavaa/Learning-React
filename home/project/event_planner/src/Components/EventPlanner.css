@@ -33,9 +33,24 @@
   
   .get-started-button:hover {
     background-color: #d32b74;
+
   }
   
-  .features,
+  .features{
+    background-color: whitesmoke;
+    padding: 20px;
+    /* makeing square background */
+    width: 30%;
+    margin: 0 auto;
+    border: 2px solid #f85199;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    margin-top: 50px;
+    text-align: middle;
+
+
+  },
   .testimonials,
   .contact,.events_categories {
     margin-top: 50px;
